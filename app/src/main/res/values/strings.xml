@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Exercicio12</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="button">Escolhi</string>
+
+
+    <string-array name="origem">
+        <item>Origem</item>
+        <item>Sao Paulo</item>
+        <item>Rio de Janeiro</item>
+    </string-array>
+
+    <string-array name="destino">
+        <item>Destino</item>
+        <item>Sao Paulo</item>
+        <item>Rio de Janeiro</item>
+    </string-array>
+    <string name="title_activity_voos">Voos</string>
+</resources>
