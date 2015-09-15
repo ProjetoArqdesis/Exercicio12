@@ -2,7 +2,7 @@
     <string name="app_name">Flight System</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+
     <string name="button">Escolhi</string>
     <string name="origem">Origem</string>
     <string name="destino">Destino</string>
@@ -10,14 +10,41 @@
 
 
 
-    <string-array name="origem">
-        <item>Sao Paulo</item>
-        <item>Rio de Janeiro</item>
+    <string name="action_settings">Configurações</string>
+    <string name="label_voo_nome">Escolha suas opções</string>
+    <string name="label_voo_origem">Origem: </string>
+    <string name="label_voo_preco">Preço: </string>
+    <string name="label_voo_destino">Destino: </string>
+    <string name="label_voo_horario">Horário: </string>
+    <string name="botao_enviar">Consultar Simples</string>
+
+
+    <string-array name="origens">
+
+        <item>Escolha a origem</item>
+        <item>São Paulo - SP</item>
+        <item>Rio de Janeiro - RJ</item>
+        <item>Porto Alegre - RS</item>
+        <item>Salvador - BA</item>
+        <item>Belo Horizonte - MG</item>
     </string-array>
 
-    <string-array name="destino">
-        <item>Sao Paulo</item>
-        <item>Rio de Janeiro</item>
+    <string-array name="destinos">
+
+        <item>Escolha o destino</item>
+        <item>Curitiba - PR</item>
+        <item>Maceió - AL</item>
+        <item>Brasília - DF</item>
+        <item>São Luis - MA</item>
+        <item>Fortaleza - CE</item>
     </string-array>
+
+    <string name="title_activity_lista_voo">Lista de Vôos</string>
+
+    <string name="txt_lista_voos">Nenhum vôo encontrado</string>
+    <string name="title_activity_detalhe_voo">Vôo Escolhido</string>
+
+    <string name="botao_enviar_melhor">Consultar</string>
     <string name="title_activity_voos">Voos</string>
+
 </resources>

@@ -17,8 +17,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Voos"
-            android:label="@string/title_activity_voos" >
+            android:name=".DetalheVooActivity"
+            android:label="@string/title_activity_detalhe_voo" >
+        </activity>
+        <activity
+            android:name=".ListaVooActivity"
+            android:label="@string/title_activity_lista_voo" >
         </activity>
     </application>
 

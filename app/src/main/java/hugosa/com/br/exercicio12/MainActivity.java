@@ -3,68 +3,85 @@ package hugosa.com.br.exercicio12;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.Spinner;
 
 public class MainActivity extends Activity {
-    public final static String EXTRA_MESSAGE = "br.usjt.MESSAGE";
+    Spinner spinnerOrigem;
+    Spinner spinnerDestino;
+    Button btnConsultar;
+    String origem, destino;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setupViews();
+
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+    private void setupViews() {
+        origem = "";
+        destino = "";
+        btnConsultar = (Button) findViewById(R.id.botao_enviar);
+        spinnerOrigem = (Spinner) findViewById(R.id.dropdown_origens);
+        spinnerOrigem.setOnItemSelectedListener(new OrigemSelecionada());
+        spinnerDestino = (Spinner) findViewById(R.id.dropdown_destinos);
+        spinnerDestino.setOnItemSelectedListener(new DestinoSelecionado());
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+    private class OrigemSelecionada implements AdapterView.OnItemSelectedListener {
+        @Override
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            origem = (String) parent.getItemAtPosition(position);
         }
 
-        return super.onOptionsItemSelected(item);
+        @Override
+        public void onNothingSelected(AdapterView<?> parent) {
+
+        }
     }
 
-
-    public void listarVoos(View view) {
-
-        String sp = "São Paulo/Rio de Janeiro: 10:00 hs" +
-                    "\nSão Paulo/Rio de Janeiro: 12:00 hs" +
-                    "\nSão Paulo/Rio de Janeiro: 14:00 hs";
-
-        String rj = "Rio de Janeiro/São Paulo: 16:00 hs" +
-                    "\nRio de Janeiro/São Paulo: 18:00 hs" +
-                    "\nRio de Janeiro/São Paulo: 20:00 hs";
-
-        Intent intent = new Intent(this, Voos.class);
-        Spinner origem = (Spinner)findViewById(R.id.origem);
-        String or = origem.getSelectedItem().toString();
-        Spinner destino = (Spinner)findViewById(R.id.destino);
-        String ds = destino.getSelectedItem().toString();
-
-        if((or.equals("Sao Paulo")) && (ds.equals("Rio de Janeiro"))) {
-            intent.putExtra(EXTRA_MESSAGE, sp);
-
-        }
-        if((or.equals("Rio de Janeiro")) && (ds.equals("Sao Paulo"))) {
-            intent.putExtra(EXTRA_MESSAGE, rj);
-
+    private class DestinoSelecionado implements AdapterView.OnItemSelectedListener {
+        @Override
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            destino = (String) parent.getItemAtPosition(position);
         }
 
+        @Override
+        public void onNothingSelected(AdapterView<?> parent) {
+
+        }
+    }
+
+    // constante static para identificar a mensagem
+    public final static String DESTINO = "br.usjt.DESTINO";
+    public final static String ORIGEM = "br.usjt.ORIGEM";
+    public final static String MODO = "br.usjt.MODO";
+    public final static String SIMPLES = "br.usjt.SIMPLES";
+    public final static String MELHOR = "br.usjt.MELHOR";
+
+    //será chamado quando o usuário clicar em enviar
+    public void consultarVoos(View view) {
+        consultar(view, SIMPLES);
+    }
+
+    public void consultarVoosMelhor(View view) {
+        consultar(view, MELHOR);
+    }
+
+    public void consultar(View view, String modo){
+        String pOrigem = this.origem.equals("Escolha a origem")?"":origem;
+        String pDestino = this.destino.equals("Escolha o destino")?"":destino;
+
+        Intent intent = new Intent(this, ListaVooActivity.class);
+        intent.putExtra(DESTINO, pDestino);
+        intent.putExtra(ORIGEM, pOrigem);
+        intent.putExtra(MODO, modo);
         startActivity(intent);
     }
+
 }
