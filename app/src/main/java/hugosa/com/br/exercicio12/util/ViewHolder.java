@@ -1,4 +1,4 @@
-package hugosa.com.br.exercicio12;
+package hugosa.com.br.exercicio12.util;
 
 import android.widget.ImageView;
 import android.widget.TextView;

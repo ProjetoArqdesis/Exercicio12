@@ -1,9 +1,11 @@
-package hugosa.com.br.exercicio12;
+package hugosa.com.br.exercicio12.util;
 
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
 
 import java.lang.reflect.Field;
+
+import hugosa.com.br.exercicio12.R;
 
 /**
  * Created by hugosa on 15/09/15.

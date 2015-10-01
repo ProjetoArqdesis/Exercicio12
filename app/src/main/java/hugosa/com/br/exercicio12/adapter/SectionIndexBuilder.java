@@ -1,8 +1,10 @@
-package hugosa.com.br.exercicio12;
+package hugosa.com.br.exercicio12.adapter;
 
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.TreeSet;
+
+import hugosa.com.br.exercicio12.model.Voo;
 
 /**
  * Created by hugosa on 15/09/15.

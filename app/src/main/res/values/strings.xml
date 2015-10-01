@@ -18,27 +18,6 @@
     <string name="label_voo_horario">Horário: </string>
     <string name="botao_enviar">Consultar Simples</string>
 
-
-    <string-array name="origens">
-
-        <item>Escolha a origem</item>
-        <item>São Paulo - SP</item>
-        <item>Rio de Janeiro - RJ</item>
-        <item>Porto Alegre - RS</item>
-        <item>Salvador - BA</item>
-        <item>Belo Horizonte - MG</item>
-    </string-array>
-
-    <string-array name="destinos">
-
-        <item>Escolha o destino</item>
-        <item>Curitiba - PR</item>
-        <item>Maceió - AL</item>
-        <item>Brasília - DF</item>
-        <item>São Luis - MA</item>
-        <item>Fortaleza - CE</item>
-    </string-array>
-
     <string name="title_activity_lista_voo">Lista de Vôos</string>
 
     <string name="txt_lista_voos">Nenhum vôo encontrado</string>

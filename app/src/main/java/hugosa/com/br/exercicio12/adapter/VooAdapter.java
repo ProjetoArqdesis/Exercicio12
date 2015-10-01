@@ -1,4 +1,4 @@
-package hugosa.com.br.exercicio12;
+package hugosa.com.br.exercicio12.adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -14,6 +14,11 @@ import android.widget.TextView;
 import java.text.NumberFormat;
 import java.util.Hashtable;
 import java.util.Locale;
+
+import hugosa.com.br.exercicio12.R;
+import hugosa.com.br.exercicio12.util.Util;
+import hugosa.com.br.exercicio12.util.ViewHolder;
+import hugosa.com.br.exercicio12.model.Voo;
 
 /**
  * Created by hugosa on 15/09/15.

@@ -1,4 +1,4 @@
-package hugosa.com.br.exercicio12;
+package hugosa.com.br.exercicio12.controller;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,6 +8,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
+
+import hugosa.com.br.exercicio12.model.Especialista;
+import hugosa.com.br.exercicio12.R;
+import hugosa.com.br.exercicio12.model.Voo;
+import hugosa.com.br.exercicio12.adapter.VooAdapter;
 
 public class ListaVooActivity extends Activity {
 

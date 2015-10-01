@@ -1,4 +1,4 @@
-package hugosa.com.br.exercicio12;
+package hugosa.com.br.exercicio12.controller;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,6 +10,10 @@ import android.widget.TextView;
 import java.io.Serializable;
 import java.text.NumberFormat;
 import java.util.Locale;
+
+import hugosa.com.br.exercicio12.R;
+import hugosa.com.br.exercicio12.util.Util;
+import hugosa.com.br.exercicio12.model.Voo;
 
 public class DetalheVooActivity extends Activity {
 
